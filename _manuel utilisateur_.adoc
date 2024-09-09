@@ -1,0 +1,70 @@
+Manuel d'utilisation
+
+Introduction :
+
+Bienvenue dans le gestionnaire de fichiers en mode texte. Cet outil vous permet de naviguer, organiser, et annoter votre système de fichiers de manière interactive en utilisant des commandes simples au clavier.
+
+Interface Principale :
+
+L'interface principale est divisée en quatre parties :
+
+Chemin du Répertoire : Affiche le chemin actuel depuis la racine du système de fichiers.
+Annotation de l'Élément Courant : Affiche l'annotation associée à l'élément courant, s'il en existe une.
+Liste des Éléments : Présente les éléments du répertoire courant avec leurs numéros associés (NER).
+Prompt de Commande : Invite l'utilisateur à saisir une commande.
+
+Commandes Disponibles
+
+Navigation :
+
+- [<NER>] .: Entrer dans un répertoire. Exemple : 4 . pour entrer dans le répertoire désigné par le NER 4.
+- ..: Remonter d'un niveau dans le système de fichiers.
+
+Manipulation de Fichiers :
+
+- [<NER>] copy: Copier un fichier ou un répertoire.
+- past: Coller le fichier ou répertoire précédemment copié.
+- [<NER>] cut: Couper un fichier ou un répertoire.
+- mkdir <nom>: Créer un nouveau répertoire.
+- [<NER>] visu: Afficher le contenu d'un fichier texte ou sa taille si ce n'est pas un fichier texte.
+- find <nom fichier>: Rechercher un fichier dans tous les sous-répertoires du répertoire courant.
+- [<NER>] rm: Supprimer un fichier.
+- pwd : Donne la position de l'utilisateur dans le system.
+
+Annotation d'Éléments :
+
+- <NER> + "<texte>": Ajouter ou concaténer du texte à l'élément désigné par le NER.
+- <NER> -: Retirer tout le texte associé à l'élément désigné par le NER.
+
+Annotations et Fichier de Notes :
+
+Toutes les annotations associées aux éléments du répertoire courant sont stockées dans un fichier appelé "notes" dans le répertoire courant. Les annotations peuvent être ajoutées ou retirées à l'aide des commandes spécifiques.
+
+Comment savoir quelle commande taper pour un élément du répertoire désigné ?
+
+L'utilisateur peut visualiser la liste des éléments du répertoire courant avec leurs numéros associés en regardant la partie de l'interface intitulée "Liste des Éléments". Chaque élément est identifié par un numéro (NER), et ces numéros peuvent être utilisés en préfixe des commandes pour désigner un élément spécifique.
+
+Mises à jour du fichier des annotations en fonction des types de commandes
+
+L'ajout ou la suppression de texte associé à un élément mettra à jour le fichier des annotations en conséquence.
+Les commandes de copie (copy) et de coupe (cut) ne nécessitent pas de mise à jour immédiate du fichier d'annotations, mais les actions de collage (past) peuvent entraîner des changements s'ils concernent des éléments avec des annotations.
+
+Bibliothèques Java pour la visualisation d'une image PNG
+Non pas actuellement mais la bibliothèque Java "javax.swing.ImageIcon" peut être utilisée pour afficher des images PNG. Il est possible d'intégrer une fonctionnalité qui permet à l'utilisateur d'afficher des images en utilisant cette bibliothèque.
+
+Commandes utiles à rajouter
+<NER> rename <nouveau_nom> : Permet de renommer un fichier ou un répertoire.
+<NER> info : Affiche des informations détaillées sur un fichier ou un répertoire, telles que les dates de création et de modification.
+
+Améliorations de l'interface clavier
+
+Historique des commandes : Permettre à l'utilisateur de parcourir les commandes précédemment utilisées.
+Autocomplétion : Proposer des suggestions basées sur la saisie de l'utilisateur pour accélérer le processus de commande.
+Raccourcis clavier : Introduire des raccourcis clavier pour les commandes les plus fréquemment utilisées.
+
+Évolutions possibles
+
+Interface Graphique : Développer une version avec une interface graphique pour rendre l'expérience utilisateur plus conviviale.
+Système de Permissions : Implémenter un système de gestion des permissions pour restreindre certaines actions selon les utilisateurs.
+Historique des Modifications : Garder un historique des modifications apportées au système de fichiers pour permettre des annulations et des restaurations.
+Recherche Avancée : Ajouter une fonctionnalité de recherche avancée pour faciliter la localisation des fichiers.

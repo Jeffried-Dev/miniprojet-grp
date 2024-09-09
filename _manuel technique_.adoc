@@ -1,0 +1,42 @@
+Manuel Technique
+
+Stockage des Annotations
+
+Les annotations sont stockées dans le fichier "notes" du répertoire courant. Le format peut être sérialisé ou dans tout autre format approprié.
+
+Gestion des Commandes
+
+Les commandes sont traitées en analysant la saisie de l'utilisateur. Les informations de navigation, de manipulation de fichiers et d'annotations sont interprétées en conséquence.
+
+Structure du Système de Fichiers
+
+La structure du système de fichiers est maintenue en mémoire pour permettre une navigation efficace et la gestion des commandes.
+
+Sauvegarde des Changements
+
+Les modifications apportées au système de fichiers, y compris les annotations, sont sauvegardées automatiquement lors de l'exécution de certaines commandes, garantissant la persistance des données.
+
+Consulter le rapport de couverture de code par les tests
+Le rapport de couverture de code peut être consulté en ouvrant le fichier target/site/jacoco/index.html dans un navigateur après l'exécution des tests.
+
+Bibliothèques utilisées et justifications
+
+Maven : Gestion des dépendances et construction du projet.
+JUnit : Framework de test unitaire.
+Jacoco : Outil de mesure de la couverture de code.
+
+Rôle des différentes classes
+
+App : Gère l'interface utilisateur et les commandes.
+
+Traitements pour gérer une commande
+
+La classe App analyse la saisie utilisateur et identifie la commande, les arguments et le NER le cas échéant.
+En fonction de la commande, la fonction appropriée est invoquée pour effectuer les actions nécessaires.
+
+Améliorations envisageables
+
+Gestion des Erreurs : Améliorer la gestion des erreurs en fournissant des messages d'erreur plus informatifs.
+Modularité : Rendre le code plus modulaire pour faciliter l'ajout de nouvelles fonctionnalités.
+Tests Additionnels : Ajouter des tests pour améliorer la robustesse du code.
+Optimisation : Optimiser les opérations de fichiers pour des performances améliorées.
